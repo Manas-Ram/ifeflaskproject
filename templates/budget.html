@@ -112,17 +112,29 @@
         
         <form method="post" action="/result">
             <h5>Type in your debt here. If you have none type the number 0: </h5>
-            <input type="text" name="yes" placeholder="Type in your debt:" />
+            <input type="number" name="yes" placeholder="Type in your debt:" />
+            <h5> If you have debt, how much do you pay for food per meal every day on average (breakfast, lunch, dinner):  </h5>
+            <input type = "number" name="food_debt" placeholder="Type in amount:" />
             <h5> What is your total salary per month:  </h5>
-            <input type="text" name="sal" placeholder="Type in your salary:" />
+            <input type="number" name="sal" placeholder="Type in your salary:" />
             <h5> How much money have you saved in a savings account in total, if you have none type 0: </h5>
-            <input type="text" name="save" placeholder="Type in your savings:" />
+            <input type="number" name="save" placeholder="Type in your savings:" />
             <h5> How much do you pay for rent per month, if you don't pay rent type 0: </h5>
-            <input type="text" name="rent_per" placeholder="Type in your rent:" />
+            <input type="number" name="rent_per" placeholder="Type in your rent:" />
             <h5> How much money do you pay in total for food each month: </h5>
-            <input type="text" name="foods" placeholder="Type in your food cost:" />
+            <input type="number" name="foods" placeholder="Type in your food cost:" />
             <h5> How many kids do you have, if you don't have kids type 0: </h5>
-            <input type = "text" name="kid" placeholder="Type in how many kids:" />
+            <input type = "number" name="kid" placeholder="Type in how many kids:" />
+            <h5> How much money do you spend on school materials per month: </h5>
+            <input type = "number" name="mat" placeholder="Type in money spent on materials:" />
+            <h5> Do you pay tuition for your child's school if you have a child (ignore if you don't):  </h5>
+            <input type = "text" name="school" placeholder="Type in yes or no:" />
+            <h5> If you answered the last question, do you pay tuition per year: </h5>
+            <input type = "text" name="year" placeholder="Type in year:" />
+            <!-- <h5> If you answered the last question with "month", how much do you pay for tuition per month: </h5>
+            <input type = "text" name="month" placeholder="Type in monthly tuition:" /> -->
+            <h5> If you answered the question with "year", how much do you pay for tuition per year:  </h5>
+            <input type = "number" name="pay" placeholder="Type in tuition:" />
             <h5> Click submit only after you have answered all the questions correctly</h5>
             <input type="submit" name="submit_button" value="Submit" />
 
