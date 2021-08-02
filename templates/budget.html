@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Atokin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Baloo+2&family=Cormorant+Garamond:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Baloo+2&family=Cormorant+Garamond:wght@300&display=swap"
+        rel="stylesheet"> -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/web.css" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark ">
+        <!-- Navbar content -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="http://www.pngall.com/wp-content/uploads/4/Dollar-Gold-Coin-PNG.png" alt="" width="30" height="24" class="d-inline-riglock align-text-top"> -->
+                    Atokin
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="investment.html">Retirement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="budget.html">Budget Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <div id="first_invest">
+        <div>
+
+            <div>
+                <h1 id="budinvesth1">
+                    Atokin's Debt Calculator
+                    <p id="budinvestp">
+                        Start saving with Atokin: Financials And More</br>
+                        <!-- All. For. Free.</br> -->
+
+                    </p>
+                    <p id="budinvestafter">
+                        All. For. Free.</br>
+
+                    </p>
+                    <button type="button" id="freeSpot"> <a id="budget_text" href="#third_color"><span
+                                class="arrow-highlight">Click Here to Get Started</span></a></button>
+                </h1>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <div id="second_color">
+        <div>
+            <h1 id="second_text" class="text_center">
+                Savings and More
+            </h1>
+            <h2 id="small2" class="text_center">
+                What is the goal?
+
+            </h2>
+        </div>
+        <ul style="list-style-type: disc;" class=" borderless bg-transparent">
+            <li class="bg-transparent borderless">No matter who you are, we are dedicated to make sure you save money
+            </li>
+            <li class=" bg-transparent borderless">With our calculator we use your statistics in order to guide you</li>
+            <li class="bg-transparent borderless">Debt? No problem. With Atokin, we help manage your debt and find a way
+                for you to get out</li>
+            <li class="l bg-transparent borderless">You can use it anytime, anyplace</li>
+            <li class=" bg-transparent borderless">A good idea is to use it at least after every month, so you can stay
+                on track of your financial journey</li>
+        </ul>
+    </div>
+    <div id="third_color">
+        <h1>Budget Calculator Information</h1>
+        <p>Answer some of our questions about you to get started</p>
+        
+        <form method="post" action="/result">
+            <h5>Type in your debt here. If you have none type the number 0: </h5>
+            <input type="text" name="yes" placeholder="Type in your debt:" />
+            <h5> What is your total salary per month:  </h5>
+            <input type="text" name="sal" placeholder="Type in your salary:" />
+            <h5> How much money have you saved in a savings account in total, if you have none type 0: </h5>
+            <input type="text" name="save" placeholder="Type in your savings:" />
+            <h5> How much do you pay for rent per month, if you don't pay rent type 0: </h5>
+            <input type="text" name="rent_per" placeholder="Type in your rent:" />
+            <h5> How much money do you pay in total for food each month: </h5>
+            <input type="text" name="foods" placeholder="Type in your food cost:" />
+            <h5> How many kids do you have, if you don't have kids type 0: </h5>
+            <input type = "text" name="kid" placeholder="Type in how many kids:" />
+            <h5> Click submit only after you have answered all the questions correctly</h5>
+            <input type="submit" name="submit_button" value="Submit" />
+
+        </form>
+        <!-- <form method="post" action="/result">
+            <h5> What is your total salary per month:  </h5>
+            <input type="text" name="sal" placeholder="Type in your salary:" />
+        </form>
+        <form method="post" action="/result">
+            <h5> How much money have you saved in a savings account in total, if you have none type 0: </h5>
+            <input type="text" name="save" placeholder="Type in your savings:" />
+        </form>
+        <form method="post" action="/result">
+            <h5> How much do you pay for rent per month, if you don't pay rent type 0: </h5>
+            <input type="text" name="rent_per" placeholder="Type in your rent:" />
+        </form>
+        <form method="post" action="/result">
+            <h5> How much money do you pay in total for food each month: </h5>
+            <input type="text" name="foods" placeholder="Type in your food cost:" />
+        </form>
+        <form method="post" action="/result">
+            <h5> How many kids do you have, if you don't have kids type 0: </h5>
+            <input type = "text" name="kid" placeholder="Type in how many kids:" />
+            <h5> Click submit only after you have answered all the questions correctly</h5>
+            <input type="submit" value="Submit" />
+        </form> -->
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
