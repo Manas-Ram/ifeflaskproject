@@ -131,9 +131,11 @@ img {
     padding-top: 30px;
 }
 #investp {
-    text-align: left;
+    /* text-align: left; */
+    padding-top: 30px;
     padding-left: 100px;
-    padding-top: 30px ;
+    /* padding-left: 100px;
+    padding-top: 30px ; */
 }
 .coins {
     box-sizing: border-box;
