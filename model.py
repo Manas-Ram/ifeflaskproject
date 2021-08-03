@@ -69,7 +69,7 @@
 #             return "You can move on"
 
 
-def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, pay, yearly_pay, food_spend):
+def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, pay, food_spend):
     # salary = float(input("How much money do you make per month: "))
     # saved_money = float(input("How much money have you saved: "))
     # rent = float(input("How much rent do you pay per month: "))
@@ -88,15 +88,14 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
     float_food_spend = float(food_spend)
 
     if float_debt == 0:
-        if float_salary <= 8750 and float_salary >= 7900:
+        if float_salary <= 100000 and float_salary >= 0:
             salary2 = float_salary - float_rent  # Subtract food
             salary3 = salary2 - float_food  # Subtract
             other_salary = salary3 * 0.6
             new_salary = salary3 * 0.4
             new_saved_money = float_saved + new_salary  # Adding to saved money
             additional_Savings = new_saved_money - float_saved
-            print("You have $" + str(new_saved_money) + " in your savings. You have saved an additional $" +
-                  str(additional_Savings) + "! Thank you for using this calculator")
+            
             if float_kids >= 1:
 
                 clothes = 300*float_kids
@@ -119,11 +118,11 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
 
                     if school.lower() == "yes":
                         # yearly_pay = input("Do you pay per year or month? ")
-                        if yearly_pay.lower() == "year":
+                        # if yearly_pay.lower() == "year":
                             # float_school_pay = float(
                             #     input("How much money do you pay per year: "))
-                            other_salary2 = other_salary - float_school_pay
-                            return "You now have $" + str(other_salary2) + " left."
+                        other_salary2 = other_salary - float_school_pay
+                        return "You now have $" + str(other_salary2) + " left."
                         # elif yearly_pay.lower() == "month":
                         #     # monthly_school_pay = float(
                         #     #     input("How much money do you pay per month: "))
@@ -143,11 +142,11 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
 
                     if school.lower() == "yes":
                         # yearly_pay = input("Do you pay per year or month? ")
-                        if yearly_pay.lower() == "year":
+
                             # school_pay = float(
                             #     input("How much money do you pay per year: "))
-                            other_salary2 = other_salary - float_school_pay
-                            return "You now have $" + str(other_salary2) + " left."
+                        other_salary2 = other_salary - float_school_pay
+                        return "You now have $" + str(other_salary2) + " left."
                         # elif yearly_pay.lower() == "month":
                         #     # monthly_school_pay = float(
                         #     #     input("How much money do you pay per month: "))
@@ -155,12 +154,16 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
                         #     return "You now have $" + str(other_salary2) + " left."
                     else:
                         return "You can move on"
-            else:
-                return ("Thank you for using this calculator!")
+            elif food_spend == 0:
+                if float_kids == 0:
+                    if school_mat == 0:
+                        if school == "no":
+                            if pay == "no":
+                                return("You have $" + str(new_saved_money) + " in your savings. You have saved an additional $" + str(additional_Savings) + "! Thank you for using this calculator")
 
     if float_debt >= 0:
         print("We can lead you in the right direction to get rid of $" + str(float_debt))
-        if float_salary <= 4500 and float_salary >= 2100:
+        if float_salary <= 100000 and float_salary >= 0:
             debt_salary = float_salary-float_rent
             print("Your money after rent is $" + str(debt_salary))
             # float_food_spend = float(input(
@@ -177,6 +180,13 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
                       str(savings_food) + " in your savings account. You should do this everyday for atleast a year")
             debt_may_pay = food_wo_sal - float_debt
             if debt_may_pay >= 100:
+                if food_spend == 0:
+                    if float_kids == 0:
+                        if school_mat == 0:
+                            if school == "no":
+                                if pay == "no":
+                                    return "Your debt is now gone! You've paid it off! You still have $" + str(debt_may_pay) + " left in your savings, but this should be for emergencies only"
+                                    # return("You have $" + str(debt_may_pay) + " in your savings. You have saved an additional $" + str(additional_Savings) + "! Thank you for using this calculator")
                 if float_kids == 0:
                     print("Your debt is now gone! You've paid it off! You still have $" + str(
                         debt_may_pay) + " left in your savings, but this should be for emergencies only")
@@ -199,14 +209,14 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
 
                         if school.lower() == "yes":
             # yearly_pay = input("Do you pay per year or month? ")
-                            if yearly_pay.lower() == "year":
+                            # if yearly_pay.lower() == "year":
                 # float_school_pay = float(
                 #     input("How much money do you pay per year: "))
-                                other_salary_new = salary_after_mat - float_school_pay
-                                if other_salary_new < 0:
-                                    return "You are $" + str(other_salary_new)+ " out of the money you have leftover, think about new ways to implement less costs"
-                                else:
-                                    return "You now have $" + str(other_salary_new) + " left."
+                            other_salary_new = salary_after_mat - float_school_pay
+                            if other_salary_new < 0:
+                                return "You are $" + str(other_salary_new)+ " out of the money you have leftover, think about new ways to implement less costs"
+                            else:
+                                return "You now have $" + str(other_salary_new) + " left."
                 #             elif yearly_pay.lower() == "month":
                 # # monthly_school_pay = float(
                 # #     input("How much money do you pay per month: "))
@@ -221,20 +231,22 @@ def budgetcalc(debt, salary, saved_money, rent, food, kids, materials, school, p
                         salary_after_mat = salary_after_clothing - total_mat
                         if salary_after_mat < 0:
                             return "You are $" + str(salary_after_mat) + " out of the money you have leftover, think about new ways to implement less costs"
-                        print("You have $" + str(salary_after_mat) + " left")
+                        else:
+                            print("You have $" + str(salary_after_mat) + " left")
         # this is for kids who go to school with tuition
         # school = input(
         #     "Do you have to pay for your kids to go to school? ")
 
                         if school.lower() == "yes":
             # yearly_pay = input("Do you pay per year or month? ")
-                            if yearly_pay.lower() == "year":
+                            # if yearly_pay.lower() == "year":
                 # school_pay = float(
                 #     input("How much money do you pay per year: "))
-                                other_salary2 = salary_after_mat - float_school_pay
-                                # if other_salary2 < 0:
-                                #     return "You are $" + str(other_salary2) " out of the money you have leftover, think about new ways to implement less costs"
-                #                 return "You now have $" + str(other_salary2) + " left."
+                            other_salary2 = salary_after_mat - float_school_pay
+                            if other_salary2 < 0:
+                                return "You are $" + str(other_salary2) + " out of the money you have leftover, think about new ways to implement less costs"
+                            else:
+                                return "You now have $" + str(other_salary2) + " left."
                 #             elif yearly_pay.lower() == "month":
                 # # monthly_school_pay = float(
                 # #     input("How much money do you pay per month: "))

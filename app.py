@@ -40,7 +40,7 @@ def result():
     print(request.form['kid'])
     print(request.form['mat'])
     print(request.form['school'])
-    print(request.form['year'])
+
     print(request.form['pay'])
     print(request.form['food_debt'])
 
@@ -53,11 +53,11 @@ def result():
     counted = request.form['kid']
     material = request.form['mat']
     private = request.form['school']
-    yearly = request.form['year']
+
 
     tuition = request.form['pay']
     food_w_breakfast = request.form['food_debt']
-    debted = budgetcalc(deb, sala, saved, monthly_rent, monthly_food, counted,material,private,tuition, yearly, food_w_breakfast)
+    debted = budgetcalc(deb, sala, saved, monthly_rent, monthly_food, counted,material,private,tuition, food_w_breakfast)
     
     
     # user_salary = budgetcalc(sala)
@@ -75,7 +75,7 @@ def result():
     # user_kids = budgetcalc(counted)
     if request.method == "POST":
         if request.form['submit_button'] == 'Submit':
-            return render_template('result.html', deb = deb, debted=debted, sala = sala, saved = saved, monthly_rent = monthly_rent, monthly_food = monthly_food, counted = counted, material = material, private=private, yearly=yearly, tuition=tuition, food_w_breakfast = food_w_breakfast )
+            return render_template('result.html', deb = deb, debted=debted, sala = sala, saved = saved, monthly_rent = monthly_rent, monthly_food = monthly_food, counted = counted, material = material, private=private, tuition=tuition, food_w_breakfast = food_w_breakfast )
     else:
         return "404 error"
 
